@@ -1,0 +1,20 @@
+<div class="common-top">
+    <i class="topI iconfont icon-youjiantou" routerLink="../"></i>
+    <p class="topP">{{title[pageType]}}</p>
+</div>
+<div [ngSwitch]="pageType" class="topMain">
+    <div *ngSwitchCase="'decoration'" class="topMainSon">
+        <decoration></decoration>
+    </div>
+    <!-- 子，父都要100%高度 -->
+    <div *ngSwitchCase="'collection'" class="topMainSon">
+        <collection class="collectionBox"></collection>
+    </div>
+    <div *ngSwitchCase="'toolbar'" class="topMainSon">
+        <toolbar class="toolbarBox"></toolbar>
+    </div>
+    <div *ngSwitchCase="'setting'" class="topMainSon">
+        <setting class="settingBox"></setting>
+    </div>
+</div>
+<!-- <router-outlet></router-outlet> -->

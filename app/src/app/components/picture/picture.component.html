@@ -1,0 +1,35 @@
+
+
+<section id="tabPic_L" (touchstart) = "touchstart($event)" (touchmove)="touchmove($event)" (touchend)="touchend($event)"  *ngIf="mapDataset" >
+    <section ee class="tabPic_L_container" *ngFor="let obj of mapDataset; trackBy:trackByName" >
+        <ul id="picList">
+            <li> <img [attr.src] = "imgUrlc[0]"></li>
+            <li> <img [attr.src] = "imgUrlc2"></li>
+            <li> <img [attr.src] = "imgUrlc3"></li>
+            <li> <img [attr.src] = "imgUrlc4"></li>
+            <li> <img [attr.src] = "imgUrlc5"></li>
+
+        </ul>
+        <section class="picMask" >
+            <p> {{obj.planTitle}}</p>
+            <nav ><a class="active"></a><a></a><a></a><a></a><a></a> </nav>
+        </section>
+    </section>
+    <section> 
+        <div  ><share [style.display] = "show"  [showbg] = "show"  (parentAttr) ="parentEvent($event)"></share></div>
+        <p class="top_L">
+            <i class="top_L_left more" (click) = "goback()"></i>
+            <i class="top_L_right more" (click) = "shareShow($event)"></i>
+        </p>
+        <!-- <p class="share_L_content"><img src="../../../assets/img/mapdebot/share.png" alt="" /></p> -->
+        <p class="foot_L" (click) ="routo()" routerLink="../homedesign" >
+            <a>
+                <i class="more"></i>
+                免费申请报价
+            </a>
+        </p>
+          
+    </section>
+</section> 
+
+

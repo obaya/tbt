@@ -1,0 +1,48 @@
+@import url("//at.alicdn.com/t/font_584953_082os7v5mapaxlxr.css");
+.common-top{
+    height: 1.2rem;
+    display:flex;
+    flex-flow:row nowrap;
+    border-bottom:0.0133rem solid #666;
+    .topI{
+        display:flex;
+        width: 1.2rem;
+        height: 1.2rem;
+        font-size:0.6rem;
+        justify-content: center;
+        align-items: center;
+        color:#000;
+    }
+    .topP{
+        display:flex;
+        flex:1;
+        font-size:0.4267rem;
+        font-weight:bold;
+        color:#000;
+        padding-left:2.6667rem;
+        align-items:center;
+    }
+}
+.topMain{
+    display:flex;
+    flex:1;
+    height:100%;
+    width: 100%;
+    .topMainSon{
+        display:flex;
+        height:100%;
+        width:100%;
+        .collectionBox{
+            height:100%;
+            width: 100%;
+        }
+        .toolbarBox{
+            height:100%;
+            width: 100%;
+        }
+        .settingBox{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

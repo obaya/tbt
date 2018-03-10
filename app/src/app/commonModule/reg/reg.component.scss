@@ -1,0 +1,122 @@
+.div1{
+    display:flex;
+    width: 100%;
+    height: 1.5333rem;
+    background: #fff;
+    color:#58bc58;
+    font-size:0.48rem;
+    align-items: center;
+    padding-left:1.0133rem;
+    border-bottom:0.0133rem solid #666;
+}
+.reg{
+    display:flex;
+    width: 100%;
+    height: 100%;
+    flex-flow:column wrap;
+    background: #eee;
+    padding:1.0133rem;
+    padding-top:0;
+    >div{
+        display:flex;
+        width: 100%;
+    }
+    >.div2{
+        height: 3.6133rem;
+        overflow: hidden;
+        >img{
+            height: 3.6133rem;
+        }
+    }
+    >.div3{
+        height: 4.0667rem;
+        flex-flow:column wrap;
+        justify-content: space-around;
+        >.div3_1{
+            display:flex;
+            width: 100%;
+            height: 1.2667rem;
+            background: #fff;
+            flex-flow:row nowrap;
+            justify-content: center;
+            >i{
+                display:flex;
+                width: 1.1067rem;
+                height: 0.9067rem;
+                background:url('../../../assets/img/mine_sprites.png') -4.2667rem -1.76rem no-repeat;
+            }
+            .font2{
+                background-position: -5.4667rem -1.76rem;
+            }
+            >input{
+                display:flex;
+                flex:1;
+                height: 100%;
+                font-size:0.4rem;
+                outline:medium;
+                border:none;
+                background: #fff;
+            }
+            >.code{
+                padding-left:0.2667rem;
+            }
+            >.btn{
+                display:flex;
+                width: 2.6667rem;
+                background: #34c083;
+                color:#fff;
+                font-size:0.3467rem;
+                border-radius:0.0667rem 0.0667rem;
+                justify-content: center;
+            }
+        }
+    }
+    >.div4{
+        height: 1.08rem;
+        width: 100%;
+        border-radius:0.08rem 0.08rem;
+        background: #34c083;
+        color:#fff;
+        font-size:0.5333rem;
+        align-items: center;
+        justify-content: center;
+    }
+    >.div5{
+        margin-top:0.56rem;
+        flex-flow:row nowrap;
+        justify-content: center;
+        >p{
+            font-size:0.3467rem;
+            color:#666;
+        }
+    }
+}
+// .mask{
+//     position:absolute;
+//     top:0;
+//     bottom:0;
+//     left:0;
+//     right:0;
+//     background:#000;
+//     opacity:0.9;
+//     >.tips{
+//         width: 5.3333rem;
+//         height: 3.3333rem;
+//         font-size:0.5333rem;
+//         padding:0.4rem;
+//         position: absolute;
+//         left:50%;
+//         top:50%;
+//         transform: translate(-50%,-40%);
+//         background: #fff;
+//         border-radius:0.1333rem 0.1333rem ;
+//         color:#58bc58;
+//         >.ensure{
+//             font-size:0.5333rem;
+//             color:#000;
+//             border-radius:0.04rem 0.04rem;
+//             border:0.0133rem solid #ccc;
+//             padding:0.1333rem;
+//         }
+//     }
+// }

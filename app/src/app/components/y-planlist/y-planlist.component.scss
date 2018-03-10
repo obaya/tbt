@@ -1,0 +1,74 @@
+.y-planList{
+    font-size:0.4rem;
+    color:#757575;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    #header{
+        color:black;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        height: 1.2rem;
+        padding:0 0.4rem 0 0.373333rem;
+        border-bottom:0.013333rem solid #B3B3B3;
+        li{
+            font-size:0.533333rem;
+        }
+        .y-ptitle{
+            font-size:0.506667rem;
+            
+        }
+    }
+    #plan-main{
+        flex:1;
+        background-color: #eee;
+        overflow-x:auto;
+        padding:0 0.266667rem;
+
+        .plan-show{
+            margin-bottom:0.266667rem;
+            height: 4.586667rem;
+            background-color: #fff;
+            position:relative;
+            img{
+              width: 9.333333rem;
+              height:4.466667rem;
+              padding:0 0.266667rem 0 0.266667rem;
+            }
+            p{
+                color:#fff;
+                position:absolute;
+                left: 0.546667rem;
+                bottom:0.346667rem;
+            }
+        }
+    }
+}
+@font-face {font-family: "iconfont";
+  src: url('../../y-font/iconfont.eot'); /* IE9*/
+  src: url('../../y-font/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../../y-font/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('../../y-font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../../y-font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-fenxiang:before { content: "\e60b"; }
+
+.icon-4:before { content: "\e649"; }
+
+.icon-shoucang:before { content: "\e651"; }
+
+.icon-xiayibu:before { content: "\e60c"; }
+
+.icon-fanhui:before { content: "\e60f"; }
+
+.icon-icon--:before { content: "\e78b"; }

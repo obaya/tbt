@@ -1,0 +1,149 @@
+html,body{
+    height: 100%;
+
+}
+.container_L{
+    color:#333;
+    @media screen and (min-width:992px){
+        html{
+            font-size:75px;
+        }
+        /*div 800*800*/
+    }
+    height: 100%;
+    font-size:0.36rem;
+    display:flex;
+    flex-direction:column;
+    img{
+        width:100%;
+    }
+    .left{
+        float:left;
+    }
+    .right{
+        float:right;
+    }
+    #header_L{
+       background: #ffffff;
+        height: 1.2rem;
+       
+    }
+    #header_L ul{
+        display:flex;
+        li{
+
+               flex:1;
+               text-align: center;
+               
+           }
+    }
+   
+    #header_L ul li:nth-child(1),#header_L ul li:nth-child(3){
+        width: 1.375rem;
+        text-align: center;
+        line-height: 1.375rem;
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.5);
+
+    }
+    #header_L ul li:nth-child(2){
+        width: 3.746667rem;
+
+        margin-top: 0.213333rem;
+        line-height: 0.75rem;
+        text-align: center;
+        display: flex;
+    }
+    #header_L ul li:nth-child(2) span{
+        display: block;
+        width: 1.84375rem;
+        background: #eee;
+        color: #6c6c6c;
+    }
+    #header_L ul li:nth-child(2) span:first-child{
+       border-radius: 0.375rem 0 0 0.375rem;
+    }
+    #header_L ul li:nth-child(2) span:last-child{
+       border-radius: 0  0.375rem 0.375rem 0;
+    }
+    #header_L ul li:nth-child(2) span.active{
+          background: #3DD066;
+          color: #EEFFF1;
+    }
+       
+
+       
+
+    #nav_L{
+        height: 1.09375rem;
+        border-bottom: 2px solid #D5DADE;
+        border-top: 1px solid #D5DADE;
+        position:relative;
+        color:#6c6c6c;
+        .nav_content_L{
+          position:absolute;
+          top:1.0599999rem;
+          left:0;
+          width:100%;
+          z-index:100;
+          background:#fff;
+          padding:0.4rem;
+          display:none;
+          a{
+              display:inline-block;
+              margin:0.293333rem 0.38rem;
+              text-align: center;
+              width:2.2rem;
+              padding:0.133333rem;
+              border:0.013333rem solid #ccc;
+              border-radius:0.133333rem;
+              color:#6c6c6c;
+          }
+          .active{
+            border:0.013333rem solid #08C63E;
+            color: #08C63E;
+          }
+
+        }
+        ul{
+            display:flex;
+        }
+        li{
+           flex:1;
+           line-height: 1.09375rem;
+           text-align: center;
+           position:relative;
+           background:url('../../../assets/img/mapdebot/map4.png ') 1.8rem 0.493333rem no-repeat ;
+ 
+        }
+    }
+  
+    
+    #nav_L ul li:nth-child(1) {
+          border-right: 1px solid #D5DADE;
+    }
+     #nav_L ul li:nth-child(2) {
+          border-right: 1px solid #D5DADE;
+    }
+     #nav_L ul li:nth-child(3) {
+          border-right: 1px solid #D5DADE;
+    }
+    #nav_L ul .active{
+       color:#08C63E;
+    }
+
+
+       #main_L{
+        background:#e1dfdf;
+        position:relative;
+        z-index:1;
+        flex:1;
+        overflow-x:hidden;
+      }
+    #footer_L{
+        height: 1.2rem;
+        background: pink;
+    }
+   
+
+}

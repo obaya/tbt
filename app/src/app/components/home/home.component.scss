@@ -1,0 +1,110 @@
+body,html{height:100%;}
+*{margin:0;padding:0;}
+
+.home{
+    height: 100%;display:flex;flex-direction:column;
+    #head{
+        height:1.28rem;
+        display:flex;
+         border-bottom:1px solid  #BBBBBB;
+        .i1{
+            flex:1;
+            margin-left:0.4rem;
+            .logo{
+                width:1.94rem;
+                height:0.61rem;
+                display: inline-block;
+                text-align: center;
+    
+            }
+        }
+        .i2{
+            flex:1;    
+            .fitment{
+                width:1.94rem;
+                height:0.58rem;
+                display:inline-block;
+                text-align: center;
+            }
+        }
+        .i3{
+            flex:3;
+        }
+        .i4{
+            flex:1;
+            .service{
+                display:inline-block;
+                text-align: center;
+            }
+        }
+    }
+    #main{
+        overflow-x: hidden;
+        flex: 1;
+        .gezi{
+            width:100%;
+            height:0.26rem;
+            background:#ddd;
+        }
+        .segmentation{
+            width:100%;
+            .segmentationTop{
+                width:100%;
+                height:1.25rem;
+                border-bottom: 0.01rem solid #bbb;
+                font-size:0.37rem;
+                line-height:1.25rem;
+                padding-left:0.34rem;
+            }
+            .planImgsSrc{
+                width:100%;
+                height:5.73rem;
+                img{
+                    display: table-cell;
+                    vertical-align: middle;
+                    margin:0.53rem auto;
+                    width:94%;
+                    height:5.2rem;    
+                }
+            }
+            .planTitle{
+                font-size:0.4rem;
+                font-weight: bold;
+                margin-left:0.4rem;
+                margin-bottom:0.29rem;
+            }
+            .inspiration{
+                font-size: 0.26rem;
+                color:#525252;
+    //          white-space: nowrap;/*强制不换行*/
+                overflow:hidden;/*自动隐藏文字*/
+                text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                width: 35em;/*不允许出现半汉字截断*/
+                margin-left:0.4rem;
+    //          width:100%;
+    //          height:1.6rem;
+    //          line-height:1.6rem;
+                
+            }
+            .createtime{
+                color:#525252;
+                margin-left:0.4rem;
+                font-size:0.4rem;
+                margin-top:0.26rem;
+                span{
+                   margin-left:0.13rem;
+                   color:#E4B1C2;
+                }
+            }
+        }
+        
+    }
+    #foot{
+        width:100%;
+        height:1.2rem;
+        background:yellow;
+    }
+}

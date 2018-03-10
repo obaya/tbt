@@ -1,0 +1,37 @@
+
+<body>
+    <div class="container_L" *ngIf="dataset">
+         
+        <header id="header_L">
+            <ul>
+                <li class="icon-caidan iconfont"></li>
+                <li>
+                    <span  [class.active] = "activeStatus" (click)="selectItembb()">套图</span>
+                    <span (click)="selectItem()"  [class.active] = "activeStatus2">单图</span>
+                </li>
+                <li class="icon-erweima iconfont"></li>
+            </ul>
+        </header>
+        <nav id="nav_L">
+          <ul>
+              <li (click) = "showNav($event)" >风格</li>
+              <li (click) = "showNav($event)">空间</li>
+              <li (click) = "showNav($event)">颜色</li>
+              <li (click) = "showNav($event)">面积</li>
+          </ul>
+          
+              <p class="nav_content_L" [style.display]= "show" >
+              <ng-template ngFor let-key [ngForOf]="styleArr" >                                               
+                  <a (click) = "getList($event)">{{key}}</a>
+              </ng-template>
+              
+              </p>
+         </nav>       
+        <main id="main_L" (click) ="hideNav($event)">
+            <mapcomment [dataset1]="dataset" [styleDataset]="datasetComment" [imgUrlA]="imgUrlB" [content]="Currentcontent" [content2]="Currentcontent2"></mapcomment>
+        </main>
+        <!-- <footer id="footer_L"></footer> -->
+        <common-foot></common-foot>
+    
+    </div>
+</body>

@@ -1,0 +1,70 @@
+<div id="home"> 
+	<div id="head">
+		<i></i>
+		<span class="lt"><a routerLink="/">&lt;</a></span>
+		<span class="span">户型设计</span>
+		<i></i>
+		<i></i>
+	</div>
+	<div id="main">
+		<img src="../../../assets/img/design.jpg"  />
+		<img src="../../../assets/img/design2.jpg" />
+		<img src="../../../assets/img/design3.jpg" />
+		<div class="shenqing">
+			<form action="" method="post">
+				<div class="MinS">
+					<input type="text" placeholder="请输入你的称呼便以联系" class="text" [(ngModel)] = "userName" name="userName"/>
+					<input type="number" placeholder="请输入手机号码" class="text" [(ngModel)] = "phone" name="phone"/>
+					<input type="text" placeholder="请选择房屋所在城市" class="text" (click)="focus()" [(ngModel)]="cInValue3" name="cInValue3"/>
+					<input type="checkbox" id="checkbox" checked="checked"/><span>我已经阅读并接受	《装修常见问题条款》</span>
+					<div class="change" (click)="messSubmit()">立即申请</div>
+					
+				</div>
+			</form>
+			<div id="windows" *ngIf="wind">
+				<div class="tishi">温馨提示</div>
+				<div class="container">
+					<img src="../../../assets/img/66.gif"/>
+					<div>手机格式错误，请更改！</div>
+				</div>
+				<div class="dianji" (click)="confirm()">确定</div>
+			</div>
+			<div id="windows2" *ngIf="wind2">
+				<div class="tishi">温馨提示</div>
+				<div class="container">
+					<img src="../../../assets/img/66.gif"/>
+					<div>内容不能为空！</div>
+				</div>
+				<div class="dianji" (click)="confirm2()">确定</div>
+			</div>
+			<div id="windows3" *ngIf="wind3">
+				<div class="tishi">温馨提示</div>
+				<div class="container">
+					<img src="../../../assets/img/1.gif"/>
+					<div>恭喜你申请成功</div>
+				</div>
+				<div class="dianji" (click)="confirm3()">确定</div>
+			</div>
+		</div>
+		<img src="../../../assets/img/design4.jpg"/>
+		<img src="../../../assets/img/design5.jpg" alt="" />
+		<div id="city" *ngIf="City" ><!-- -->
+			<span class="province">
+				<ul *ngIf="places" >
+					<li *ngFor="let obj of places;let idx = index;"  [class.activd]="idx == color" (click)="clickCity($event,idx)">{{obj.label}}</li>
+				</ul>
+			</span>
+			<span class="city">
+				<ul *ngIf="curCity">
+					<li *ngFor="let obj of curCity" (click)="cityInput($event)">{{obj.label}}</li>
+				</ul>
+			</span>
+		</div>
+	</div>
+	<!--<div id="foot">
+		
+	</div>-->
+</div>
+
+
+

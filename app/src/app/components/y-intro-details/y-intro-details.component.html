@@ -1,0 +1,71 @@
+<div class="y-introDetail">
+    <ul id="header">
+        <li (click)="goback()">
+            <i class="iconfont icon-fanhui" style="font-size:0.506667rem;"></i>
+        </li>
+        <li class="y-ititle">公司简介</li>
+        <li></li>
+    </ul>
+    <div id="main">
+        <div class="main-top">
+            <p class="info-title">公司简介</p>
+            <p class="info-detail">{{introduce}}</p>
+        </div>
+        <div class="main-bottom">
+            <p class="info-title">详细信息</p>
+            <ul>
+                <li>
+                    <p>公司规模:</p>
+                    <p>15-30设计团队,50只以上施工队</p>
+                </li>
+                <li>
+                    <p>装后服务:</p>
+                    <p>参与土巴兔诚信装修保障1个工作日内给与网站回复</p>
+                </li>
+                <li>
+                    <p>初期设计/量房:</p>
+                    <p>免费设计量房,量房后3天内出方案</p>
+                </li>
+                <li>
+                    <p>初期预算/洽谈方式:</p>
+                    <p>免费出预算,门店洽谈预算不可带走</p>
+                </li>
+                <li>
+                    <p>深化预算:</p>
+                    <p>水电预算决算不超5%,拆旧改强改地找平等项目,合同明确各项工艺单价,除水电决算,其余部分决算不超5%</p>
+                </li>
+                <li>
+                    <p>深化设计:</p>
+                    <p>设计合同签订后,施工和儿童签订前,提供不少于8张基本图纸</p>
+                </li>
+                <li>
+                    <p>材料质量:</p>
+                    <p>假一罚十</p>
+                </li>
+                <li>
+                    <p>合同规范性:</p>
+                    <p>使用政府示范合同</p>
+                </li>
+            </ul>
+            <p class="info-title">公司服务</p>
+            <ul>
+                <li>
+                    <p>服务区域:</p>
+                    <p>{{companyInfo.section}}</p>
+                </li>
+                <li>
+                    <p>服务专长:</p>
+                    <p>{{companyInfo.exp1}};{{companyInfo.exp2}}</p>
+                </li>
+                <li>
+                    <p>承接价位:</p>
+                    <p>{{companyInfo.price}}</p>
+                </li>
+                <li>
+                    <p>专长风格:</p>
+                    <p>{{companyInfo.style}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

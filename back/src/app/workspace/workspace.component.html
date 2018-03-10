@@ -1,0 +1,49 @@
+<my-gotop></my-gotop>
+
+<div class="header">
+  <div>
+    <a href="https://angular.cn/guide/glossary">
+      <img src="./favicon.ico" alt="" width="40">
+    </a>
+    <span style="font-size:30px;position:absolute;top:14px;left:80px;color:#fff">后台管理</span>
+  </div>
+  <div style="margin-right: 40px">
+    <ul>
+      <li class="header-li">
+        <a class="header-item" (click)="loginOut()">
+          <i class="fa fa-sign-out"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="menu" [@menuState]="state">
+  <span class="text-error"></span>
+  <span class="fa fa-bars bars" (click)="changeMenuWidth()"></span>
+  <p-accordion>
+    <p-accordionTab *ngFor="let item of menus ;let i=index;" [selected]="i == 0">
+      <p-header>
+        <i class="item-url fa" [ngClass]="item.icon" [@imgState]="state"></i>
+        <span>{{item.name}}</span>
+      </p-header>
+      <ul>
+        <div *ngIf="!pTooltipIf">
+          <li *ngFor="let children of item.children"><a routerLink="{{children.link}}" routerLinkActive='active-link'>{{children.name}}</a>
+          </li>
+        </div>
+        <div *ngIf="pTooltipIf">
+          <li *ngFor="let children of item.children"><a routerLink="{{children.link}}" routerLinkActive='active-link'
+                                                        pTooltip="{{children.name}}"></a>
+          </li>
+        </div>
+      </ul>
+    </p-accordionTab>
+  </p-accordion>
+</div>
+
+
+<div class="router" [@routerState]="state">
+  <router-outlet></router-outlet>
+</div>

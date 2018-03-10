@@ -1,0 +1,42 @@
+
+
+<section class="double" [style.display]= "content2">
+     <section>
+         <section class="combopic_L">
+             <section class="c_list_L" *ngFor="let key of styleDataset;let idx =index; trackBy:trackByName">
+                <!-- <ng-template ngFor let-key [ngForOf]="styleDataset"  >  -->
+               
+                    <img [attr.src] = "imgUrlA[idx]" class={{key.plan_id}} (click) ="showPic($event)" (click)="routo($event)"/>
+                    <!-- <img [attr.src] = "imgUrl[idx]" class={{key.plan_id}} (click) ="showPic($event)" (click)="routo($event)"/> -->
+                        <div class="combopic_L_content " >
+                            <div class="combopic_L_text "  >
+                                <p class="title">{{key.planTitle}}</p>
+                                <p class="design" (click) = "rout()">我要这样设计</p>
+                            </div>
+                            <div class="combopic_L_view">
+                                <p class="pl history"><i class="i1"></i><span class={{key.plan_id}} (click) ="showPic($event)" (click)="routo($event)">{{key.area}}</span></p>
+                                <p class="pl picNum"><i class="i2"></i><span class={{key.plan_id}} (click) ="showPic($event)" (click)="routo($event)">看图</span></p>
+                                <p><font>{{key.plan_id}}</font>人已预约</p>
+                            </div>
+                        </div>
+                <!-- </ng-template> -->
+
+             </section>
+         </section>
+     </section>
+</section>
+
+<section class="single_L" [style.display]= "content"   >
+
+  <section >
+
+     <ul class="good_list_L">
+       <li style="margin-top: 0px;" class="single_L_list" *ngFor="let obj of styleDataset;let idx =index; trackBy:trackByName">
+         <a class="list" > 
+            <img [attr.src] = "imgUrlA[idx]" class={{obj.plan_id}} (click) ="showPic($event)" (click)="routo($event)" routerLink="picture"/></a>
+       </li>
+
+     </ul>
+  </section>
+</section>
+<!-- <common-map><common-map> -->

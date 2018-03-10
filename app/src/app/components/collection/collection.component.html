@@ -1,0 +1,17 @@
+<div class="collection">
+    <ul *ngIf="pageState" (click)="changeCollection()">
+        <li [routerLink]="'../top/collectP'">
+            <i class="font1  iconfont icon-tuku"></i>
+            <span class="text">方案</span>
+            <span class="count">(0)</span>
+            <i class="font2 iconfont icon-youjiantou"></i>
+        </li>
+        <li [routerLink]="'../top/collectC'">
+            <i class="font1 font11 iconfont icon-gongsi"></i>
+            <span class="text">公司</span>
+            <span class="count">({{companyCount}})</span>
+            <i class="font2 iconfont icon-youjiantou"></i>
+        </li>
+    </ul>
+    <router-outlet></router-outlet>
+</div>

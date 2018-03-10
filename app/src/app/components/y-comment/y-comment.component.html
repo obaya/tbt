@@ -1,0 +1,84 @@
+<div class="y-comment">
+    <div class="h">
+        <ul id="header">
+            <li (click)="goback()">
+                <i class="iconfont icon-fanhui" style="font-size:0.506667rem;"></i>
+            </li>
+            <li class="y-ctitle">全部业主评价</li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="s">
+        <ul id="star">
+            <li>
+                <span>设计评分</span>
+                <span id="s_star_con" class="s-star-vote starall">
+                    <span id="s_add_star" class="s-add-star"></span>
+                    <span id="s_del_star" class="s-del-star"></span>
+                </span>
+                <!-- <y-star [fenshu]="4" ></y-star> -->
+
+                <span class="fenshu">{{shejiFen}}分</span>
+            </li>
+            <li>
+                <span>服务评分</span>
+                <span id="f_star_con" class="f-star-vote starall">
+                    <span id="f_add_star" class="f-add-star"></span>
+                    <span id="f_del_star" class="f-del-star"></span>
+                </span>
+                <!-- <y-star [fenshu]="5" ></y-star> -->
+                
+                <span class="fenshu">{{fuwuFen}}分</span>
+            </li>
+            <li>
+                <span>施工评分</span>
+                <span id="g_star_con" class="g-star-vote starall">
+                    <span id="g_add_star" class="g-add-star"></span>
+                    <span id="g_del_star" class="g-del-star"></span>
+                </span>
+                <!-- <y-star [fenshu]="4.5"></y-star> -->
+                <span class="fenshu">{{shigongFen}}分</span>
+            </li>
+        </ul>
+    </div>
+    <div class="r">
+        <ul id="rang" (click)="checked($event)">
+            <li>
+                <p>{{num}}</p>
+                <p class="comType">全部</p>
+            </li>
+            <li>
+                <p>{{hp}}</p>
+                <p class="comType">好评</p>
+            </li>
+            <li>
+                <p>{{zp}}</p>
+                <p class="comType">中评</p>
+            </li>
+            <li>
+                <p>{{cp}}</p>
+                <p class="comType">差评</p>
+            </li>
+        </ul>
+    </div>
+    <div id="c-main">
+        <ul class="c-pingluns" *ngFor="let obj of commentInfo; let idx = index;">
+            <li class="c-pinglun">
+                <div class="touxiang">
+                    <img src="../../../assets/pic.jpg" alt="兔子" />
+                </div>
+                <div class="com-content">
+                    <div class="top">
+                        <div class="name">{{obj.nickName}}</div>
+                        <div class="time">{{obj.createtime}}</div>
+                    </div>
+                    <div class="center">
+                        <div class="xing"></div>
+                         <!-- <div class="jindu"></div> -->
+                    </div>
+                    <div class="buttom">{{obj.commentText}}</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

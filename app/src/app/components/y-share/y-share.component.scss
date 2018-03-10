@@ -1,0 +1,72 @@
+
+.share_L_container{
+    height:100%;
+    width:100%;
+    position:relative;
+    .share_bg{
+        height:100%;
+        width:100%;
+        position:absolute;
+        top:0;
+        left:0;
+        background: #000;
+        opacity:0.5;
+        z-index:100;
+    }
+    .share_L{
+        width:100%;
+        position:absolute;
+        bottom:0;
+        left:0;
+        z-index:101;
+        background: #fff;
+        height:4.54rem;
+        .share_L_content{
+            display:flex;
+            width:100%;
+            p{
+                flex:1;
+                font-size:0.4rem;
+                text-align: center;
+                i{
+                    width:1.333333rem;
+                    height:1.333333rem;
+                    margin:0.306667rem auto;//238  
+                    display:block;
+                    background:url("../../y-font/pic.jpg");
+                }
+                .list2{
+                    background-position: 4.626667rem 0;
+                } 
+                .list3{
+                    background-position: 9.306667rem 0;
+                }
+                a{
+                    color:#646464;
+                }
+            }
+        }
+    }
+    .title{
+        text-align:center;
+        font-size:0.4rem;
+        margin:0.4rem;
+
+    }
+    .info{ 
+        font-size:26px; 
+        line-height:60px; 
+        text-align:center;
+        width:100%; 
+        position:absolute;
+        bottom:90px;
+        -webkit-transform-origin:bottom;
+        -webkit-transform:scale(0); 
+        transition:0.5s; 
+        opacity:0;
+        color:#fff;
+        background:#000;
+     
+       border-radius:0.266667rem;
+      }
+}

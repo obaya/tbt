@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TBT</title>
+  <base href="/">
+
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"  id="vp" />
+
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    var wd = document.documentElement.clientWidth * window.devicePixelRatio / 10;
+    //物理像素*设备像素比=真实像素
+    document.getElementsByTagName("html")[0].style.fontSize = wd + "px";
+    // 把屏幕的倍率缩小到N分之一（N是window.devicePixelRatio）
+    var scale = 1 / window.devicePixelRatio;
+    var mstr = 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no';
+    document.getElementById("vp").content = mstr;
+  </script>
+
+  <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.4&key=89bd6742c9d2aea3f269c2f8fb62bc53"></script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

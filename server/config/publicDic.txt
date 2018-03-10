@@ -1,0 +1,11 @@
+{
+    "en":{
+        "id":"ID",
+        "description":"Description"
+    },
+    "cn":{
+        "id":"标识",
+        "description":"标题",
+        "nPrice":"价格"
+    }
+}

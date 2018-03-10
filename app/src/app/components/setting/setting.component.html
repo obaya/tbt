@@ -1,0 +1,48 @@
+<!-- <common-top></common-top> -->
+<div class="setting">
+    <div class="son1">
+        <div class="son2">
+            <p>去评价一把</p>
+            <i></i>
+        </div>
+        <div class="son2" >
+            <p >推荐给好友</p>
+            <i></i>
+        </div>
+        <div class="son2">
+            <p>建议与反馈</p>
+            <i></i>
+        </div>
+    </div>
+    <div class="son1">
+        <div class="son2">
+            <p>当前版本</p>
+            <p class="text">v3.3.9</p>
+        </div>
+        <div class="son2">
+            <p>服务条款</p>
+            <i></i>
+        </div>
+    </div>
+    <div class="son1">
+        <div class="son2" (click)="emptyCache(2)">
+            <p>清空缓存</p>
+            <p class="text">{{cacheSize}}</p>
+        </div>
+    </div>
+    <div class="son1 logOffBox" (click)="signOut(1)">
+        <div class="son2">
+            <p class="logOff">退出登录</p>
+        </div>
+    </div>
+    <div *ngIf="mask['mask']" class="mask">
+        <div class="tips">
+            <span>{{tips[tipsIdx]}}</span>
+            <div>
+                <button class="ensure" *ngIf="mask['ensure']" (click)="logOff()">确定</button>
+                <button class="cancel" *ngIf="mask['cancel']" (click)="changeMask()">取消</button>
+            </div>
+        </div>
+    </div>
+ 
+</div>

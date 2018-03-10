@@ -1,0 +1,44 @@
+<div id="home"> 
+		<div id="head">
+				<i></i>
+				<span class="lt"><a routerLink="/">&lt;</a></span>
+				<span class="span">精品专题</span>
+				<i></i>
+				<i></i>
+		</div>
+		<div id="main">
+				<div class="select">
+						<span class="style" (click)="controlStyle()">风格</span>
+						<span class="htype">户型</span>
+				</div>
+				<div id="tier">
+						<div class="bigSelect"  *ngIf="styleSelect">
+								<div class="minSelect">
+										<div class="left" *ngIf="typeArr1">									
+												<span *ngFor="let item of typeArr1; " [class.activd]="item.label == color" (click)="height($event,item.label)">{{item.label}}</span>
+										</div>
+										<div class="center" *ngIf="typeArr2">
+												<span *ngFor="let item of typeArr2 "  [class.activd]="item.label == color" (click)="height($event,item.label)">{{item.label}}</span>
+										</div>
+										<div class="right" *ngIf="typeArr3">
+												<span *ngFor="let item of typeArr3 "  [class.activd]="item.label == color" (click)="height($event,item.label)">{{item.label}}</span>				
+										</div>
+								</div>
+						</div>
+						
+				</div>
+				<div class="container" *ngIf="data">
+						<ul *ngFor="let item of data" class="data"  [routerLink]="['../picture',{id:item['plan_id']}]" >
+								<li class="planImgsSrc">
+									<img src="{{api2}}/getImage?url=+{{item.planImgsSrc.split(';')[0]}}" alt="" />
+								</li>
+								<li class="planTitle">{{item.planTitle}}</li>
+								<li class="inspiration">{{item.inspiration}}</li>
+						</ul>
+				</div>
+				<div id="noType" *ngIf = "filtrateType">
+					<img src="../../../assets/img/66.gif" alt="" />
+					<span>暂时没有此类型</span>
+				</div>
+		</div>
+</div>

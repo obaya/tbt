@@ -1,0 +1,23 @@
+<section class="share_L_container" [style.display] ="showbg">
+    <section class="share_L">
+        <p class="title">分享</p>
+         <div class="share_L_content">
+             <span class="info" [style.WebkitTransform] = "Transform" [style.opacity] = "opacity"></span>
+             <p (click)="select_L($event)">
+                <i class="list1" ></i>
+                 <a>微信分享</a>
+             </p> 
+             <p  (click)="select_L($event)">
+                <i class="list2" ></i>
+                 <a>朋友圈分享</a>
+             </p> 
+             <p  (click)="select_L($event)">
+                <i class="list3" ></i>
+                 <a>微博分享</a>
+             </p>
+
+         </div>    
+    </section>
+    <section class="share_bg" (click) ="shareHidden($event)"></section>
+    
+</section>

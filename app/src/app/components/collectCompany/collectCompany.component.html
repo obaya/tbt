@@ -1,0 +1,21 @@
+<div class="collect">
+    <!-- [routerLink]="['top',{pageType:pageType[0]}]"  -->
+    <div class="div1" [routerLink]="['../../../company',{id:obj['id']}]" *ngFor="let obj of dataset; let idx = index; trackBy:trackByIdx" (click)="sendCompanyName($event,idx)">
+        <div class="div2">
+            <img [attr.src]="imgsUrl[idx]"/>
+        </div>
+        <div class="div21">
+            <div class="div3">
+                <p class="companyName">{{obj.companyName}}</p>
+                <i class="font2"></i>
+            </div>
+            <div class="div3">
+                <p class="kb">口碑值：{{obj.kb}}</p>
+                <p class="style">风格：{{obj.style}}</p>
+            </div>
+            <div class="div3">
+                <p class="consultation">咨询人数：{{obj.consultation}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="y-planList">
+    <ul id="header">
+        <li (click)="goback()">
+            <i class="iconfont icon-fanhui" style="font-size:0.506667rem;"></i>
+        </li>
+        <li class="y-ptitle">全部设计方案</li>
+        <li></li>
+    </ul>
+    <ul id="plan-main" class="cont">
+        <li class="plan-show" *ngFor="let obj of planList; let idx = index;"  (click)="todetail(idx)">
+            <img [src]="obj.logoimgUrl" alt="图片无法显示" />
+            <p>{{obj.title}}</p>
+        </li>
+
+    </ul>
+
+</div> 

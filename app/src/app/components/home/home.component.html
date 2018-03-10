@@ -1,0 +1,27 @@
+<div class="home">
+	<div id="head">
+		<i class="i1"><img src="../../../assets/img/logo.jpg" class="logo"/></i>
+		<i class="i2"><img src="../../../assets/img/fitment.jpg" class="fitment"/></i>
+		<i class="i3"></i>
+		<i class="i4"><img src="../../../assets/img/head.jpg" class="service"/></i>
+	</div>
+	<div id="main" (scroll)="test($event,scroll)" #scroll>
+		<slideshow></slideshow>
+		<homeSelect></homeSelect>
+		<div class="gezi"></div>
+		<div class="segmentation">
+			<div class="segmentationTop">灵感之泉</div>
+			<div *ngIf="data">
+				<ul *ngFor="let item of data" class="data" [routerLink]="['picture',{id:item['plan_id']}]">
+					<li class="planImgsSrc"><img src="{{api2}}/getImage?url=+{{item.planImgsSrc.split(';')[0]}}" alt="" /></li>
+
+					<li class="planTitle">{{item.planTitle}}</li>
+					<li class="inspiration">{{item.inspiration}}</li>
+					<li class="createtime">{{item.createtime | slice:0:10}} |<span>专题</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+		
+	<common-foot></common-foot>
+</div>

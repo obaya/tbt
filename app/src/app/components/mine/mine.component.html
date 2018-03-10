@@ -1,0 +1,74 @@
+<div class="mine">
+    <div class="user" [routerLink]="userRouter"></div>
+    <div class="userId">{{nickName}}</div>
+    <div class="main">
+        <ul>
+            <li [routerLink]="['top',{pageType:pageType[0]}]">
+                <div class="left">
+                    <i class="mainI mainI1 iconfont icon-fangzi"></i>
+                </div>
+                <div class="right">
+                    <span class="span1" routerLink="../homedesign">装修免费服务</span>
+                    <span class="span2">免费发布您的装修需求</span>
+                </div>
+                <i class="rightI iconfont icon-youjiantou"></i>
+            </li>
+            <li [routerLink]="['top',{pageType:pageType[1]}]">
+                <div class="left">
+                    <i class="mainI mainI2 iconfont icon-wujiaoxing"></i>
+                </div>
+                <div class="right">
+                    <span class="span1">我的收藏</span>
+                    <span class="span2">把你喜欢的都收藏起来吧</span>
+                </div>
+                <i class="rightI iconfont icon-youjiantou"></i>
+            </li>
+            <li [routerLink]="['top',{pageType:pageType[2]}]">
+                <div class="left">
+                    <i class="mainI mainI3 iconfont icon-icon--"></i>
+                </div>
+                <div class="right">
+                    <span class="span1">工具箱</span>
+                    <span class="span2">更多应用服务</span>
+                </div>
+                <i class="rightI iconfont icon-youjiantou"></i>
+            </li>
+            <li [routerLink]="['top',{pageType:pageType[3]}]">
+                <div class="left">
+                    <i class="mainI mainI4 iconfont icon-tubiaolunkuo-"></i>
+                </div>
+                <div class="right">
+                    <span class="span1">设置</span>
+                    <span class="span2">了解我们更多</span>
+                </div>
+                <i class="rightI iconfont icon-youjiantou"></i>
+            </li>
+        </ul>
+        <div class="transition">更多装修秘籍</div>
+        <div class="contact">
+            <div>
+                <div class="left">
+                    <i class="iconfont icon-weixingongzhonghao"></i>
+                </div>
+                <div class="right">
+                    <span class="span1">微信公众号</span>
+                    <span class="span2">关注有礼</span>
+                    <i></i>
+                </div>
+            </div>
+            <div>
+                <div class="left">
+                    <i class="left_i iconfont icon-weixingongzhonghao"></i>
+                </div>
+                <div class="right">
+                    <span class="span1">微信公众号</span>
+                    <span class="span2">关注有礼</span>
+                    <i></i>
+                </div>
+            </div>
+        </div>
+        <div class="transition2"></div>
+    </div>
+    <common-foot></common-foot>
+    <!-- <div class="tempFoot"></div> -->
+</div>

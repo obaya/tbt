@@ -1,0 +1,34 @@
+<div class="y-planDetail">
+    <ul id="header">
+        <li (click)="goback()">
+            <i class="iconfont icon-fanhui" style="font-size:0.506667rem;"></i>
+        </li>
+        <li class="y-dtitle">设计方案详情</li>
+        <li>
+            <!-- <i class="iconfont icon-fenxiang" style="font-size:0.506667rem;"></i> -->
+        </li>
+    </ul>
+    <div id="bottom">
+        <h1>{{planDetail.planTitle}}</h1>
+        <div class="planDetail">
+            <ul class="plan-top">
+                <li><span>设计师:</span><span>{{planDetail.designer}}</span></li>
+                <li><span>风格:</span><span>{{planDetail.style}}</span></li>
+                <li><span>面积:</span><span>{{planDetail.area}}</span></li>
+                <li><span>价格:</span><span>7-8万</span></li>
+                <li><span>作品类型:</span><span>公装</span></li>
+                <li><span>房型:</span><span>{{planDetail.space}}</span></li>
+            </ul>
+            <ul class="plan-bottom">
+                <li><span>楼盘名称:</span><span>{{planDetail.space}}</span></li>
+                <li><span>楼盘地址:</span><span>{{planDetail.city}}</span></li>
+                <li><span>设计灵感:</span><span>{{planDetail.inspiration}}</span></li>
+            </ul>
+            <ul class="plan-image">
+                <li>
+                    <img [src]="planimgUrl" alt="这里的图片来自于数据库" />
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

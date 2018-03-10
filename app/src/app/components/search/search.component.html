@@ -1,0 +1,143 @@
+<div id='yp_search'>
+    <header id='yp_search_header'  >
+       <span></span>  <span >同城装修公司</span> <i class='iconfont icon-sousuo' (click)="showMainScarch()" ></i>
+    </header>
+    <main  id='yp_search_body' #searchbd (scroll)="mainSide($event,cibody,yploadData)">
+      <div class='yp_ci_box' [class.showbox]="showbox">
+          <ul class='yp_classify'>
+              <li (click)="showClassify('adds')" [class.focus]="adds" > <i class='iconfont icon-icon-test icon-l'></i>{{classifyFoucs}}<i class="iconfont icon-xiala icon-r"></i> </li> 
+              <li (click)="showClassify('soft')" [class.focus]="soft" > <i class='iconfont icon-paixu icon-l' ></i>
+                <ng-container *ngIf="softFoucs=='hot'">热门排序</ng-container>
+                <ng-container *ngIf="softFoucs=='kb'">口碑最好</ng-container>
+                <ng-container *ngIf="softFoucs=='consultation'">咨询最多</ng-container>
+                
+                <i  class="iconfont icon-xiala icon-r"></i> </li> 
+            </ul> 
+            
+            <ul class='yp_ci_addrs'>
+                <li class='yp_ci_city' [class.focus]="adds"> 
+                  <div class="yp_city_main">
+                  <span [class.focus]="classifyFoucs=='全城'"  (click)="changeClassify('全城')" >全城</span>
+ 
+                  <span *ngFor="let val of addressList; " [class.focus]="classifyFoucs==val"  (click)="changeClassify(val,searchbd)">
+                      {{val+"区"}}
+                    
+                  </span>
+                </div>
+                  <div class='yp_classify_foot' (click)="showCityList()">
+           
+                        <div>
+                            当前城市:<span *ngIf="address">{{city}}</span>
+                          </div>
+                          <div>
+                            更换<i class="iconfont icon-jiantou"></i>
+                          </div>
+                    </div>
+
+
+                  
+                </li> 
+                <li class='yp_ci_hot'  [class.focus]="soft">
+                    <p (click)="changeSoft('hot',searchbd)"  [class.focus]="softFoucs=='hot'" >热门排序</p>
+                    <p (click)="changeSoft('kb',searchbd)"  [class.focus]="softFoucs=='kb'" >口碑最好</p>
+                    <p (click)="changeSoft('consultation',searchbd)"  [class.focus]="softFoucs=='consultation'">咨询最多</p>
+                    <!-- <p>离我最远</p>      -->
+                </li> 
+                
+            </ul> 
+            <div class='yp_ci_out' (click)="hideClassify()"></div>
+      </div>
+
+        
+        <section class='yp_ci_body' #cibody>
+            <h2  >
+                <div class='yp_classify_foot_box' *ngIf="address" >
+              <span>当前位置:<span>{{address.address}}</span>      </span> 
+              <i class='iconfont icon-shuaxin'></i>
+            </div> 
+              <div class='yp_classify_foot_loadding'  *ngIf="!address">
+                定位中      <img src="../../../assets/img/search/loadding.gif" alt="">   
+                </div>
+            </h2>
+            <ul>
+
+                  <ng-template [ngIf]="businessKey">
+                      <li *ngFor="let val of businessList; trackBy: trackById" (click)="skipRouter(val.id)">
+                        <div>
+                          <img [attr.src]="val.logo" alt="">
+                        </div>
+                        <div>
+                          <h3> <span>{{val.companyName}}</span>  <i>保</i> </h3>
+                          <p> 口碑值:<span>{{val.kb}}</span> 风格: {{val.style.split(',').join(" ")}} </p>
+                          <div> 咨询人数:{{val.consultation}} </div>
+                          
+                          
+                        </div>
+                        
+                      </li>
+                 
+               </ng-template>
+            </ul>
+            <div  class='yp_loadData' *ngIf="loadData" #yploadData [@changeOnloadCartool]="loadDataCartool" >
+                  正在加载 <img src="../../../assets/img/search/loadding3.gif" alt="">
+            </div>
+        </section>
+        <div class="yp_fixed_btn">
+          <i  class="iconfont icon-dianhua"></i>
+          <i  (click)="showMap()" class="iconfont icon-icon-test"></i>
+          
+        </div>
+    
+    </main>
+    <div  id='yp_search_footer'>
+          <div class='yp_footer_container'>
+            <common-foot></common-foot>
+          </div>
+    </div>  
+    <div id='yp_map' [@changeMap]="mapKey">
+        <div class='map_back-menu' (click)="hideMap()">
+            <i class="iconfont icon-fanhui"></i>
+        </div>
+        <div id="yp_map_dt">
+
+        </div>
+    </div>
+    
+</div>
+
+<ng-container *ngIf="mainScarchKey">
+    <div id="yp_main_scarch"  >
+        <div class="yp_ms_header">
+           <div>  <i class="iconfont icon-fangdajing"></i>  <input type="text" placeholder="请输入当前城市的装修公司名"   [(ngModel)]="mainScarchValue"  #aaaa (input)="getSearchData(aaaa)" /></div> <span (click)="hideMainScarch()">取消</span>
+        </div> 
+        
+        <div class="yp_ms_body" *ngIf="mainScarchData">
+            <ul>
+    
+                <li *ngFor="let val of mainScarchData; trackBy: trackById"  (click)="skipRouter(val.id)">
+                  <div>
+                    <img [attr.src]="val.logo" alt="">
+                  </div>
+                  <div>
+                    <h3> <span>{{val.companyName}}</span>  <i>保</i> </h3>
+                    <p> 口碑值:<span>{{val.kb}}</span> 风格: {{val.style.split(',').join(" ")}} </p>
+                    <div> 咨询人数:{{val.consultation}} </div>
+                    
+                    
+                  </div>
+                  
+                </li>
+           
+               
+          </ul>
+        </div> 
+        
+    </div>
+</ng-container>
+
+<ng-container *ngIf="showCitylistKey">
+  
+  <app-search-details [(addressList)]="addressNameArr"  [city]="city"  (cencalCityList)="showCityList($event)" (setNewCity)="setNewCity($event,searchbd)" >
+    
+  </app-search-details>
+</ng-container>

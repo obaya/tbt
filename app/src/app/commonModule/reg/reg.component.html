@@ -1,0 +1,22 @@
+<div class="div1" [routerLink]="['../mine']">关闭</div>
+<div class="reg">
+    <div class="div2">
+        <img src="../../../assets/img/reg.png" />
+    </div>
+    <div class="div3">
+        <div class="div3_1">
+            <i></i>
+            <input type="text" #phone (blur)="unFocus(phone.value)" required placeholder="请输入正确的手机号码">
+        </div>
+        <div class="div3_1">
+            <i class="font2"></i>
+            <input type="text" #code (blur)="unCode(code.value)" class="code" required placeholder="输入验证码">
+            <button class="btn" (click)="sendCode($event)">获取验证码</button>
+        </div>
+    </div>
+    <div class="div4" (click)="login()" >快捷登录</div>
+    <div class="div5">
+        <p [routerLink]="['../mine']">返回我的</p>
+    </div>
+</div>
+<shade *ngIf="mask" [mask]="mask" [tipsIdx]="tipsIdx" (outputvalue)="onOutput($event)"></shade>

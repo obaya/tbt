@@ -1,0 +1,89 @@
+.setting{
+    display:flex;
+    height:100%;
+    width: 100%;
+    flex-flow:column wrap;
+    justify-content: flex-start;
+    background: #eee;
+    >.son1{
+        display:flex;
+        width: 100%;
+        flex-flow:column wrap;
+        justify-content: flex-start;
+        padding-left:0.4rem;
+        border-top:0.2667rem solid #eee;
+        background: #fff;
+        >.son2{
+            display:flex;
+            height: 1.1333rem;
+            flex-flow:row nowrap;
+            align-items:center;
+            border-bottom:0.0133rem solid #ccc;
+            justify-content: space-between;
+            >p{
+                font-size:0.3733rem;
+                color:#000;
+                letter-spacing:0.0267rem;
+            }
+            >.text{
+                color:#ccc;
+                margin-right:0.4rem;
+            }
+            >i{
+                display:flex;
+                width: 0.5467rem;
+                height: 1.0667rem;
+                margin-right:0.4rem;
+                background:url('../../../assets/img/mine_sprites.png') -3.2133rem -2.08rem no-repeat;
+            }
+            .logOff{
+                width: 100%;
+                font-size:0.4267rem;
+                letter-spacing:0.04rem;
+                text-align:center;
+            }
+        }
+    }
+    .mask{
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        background:#000;
+        opacity:0.8;
+        >.tips{
+            width: 5.3333rem;
+            height: 3.3333rem;
+            font-size:0.5333rem;
+            padding:0.4rem;
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-40%);
+            background: #fff;
+            border-radius:0.1333rem 0.1333rem ;
+            color:#58bc58;
+            >span{
+                display: inline;
+            }
+            >div{
+                margin-top:0.2rem;
+                >.ensure{
+                    font-size:0.5333rem;
+                    color:#000;
+                    border-radius:0.0533rem 0.0533rem;
+                    border:0.0133rem solid #ccc;
+                    padding:0.1333rem;
+                }
+                >.cancel{
+                    font-size:0.5333rem;
+                    color:red;
+                    border-radius:0.0533rem 0.0533rem;
+                    border:0.0133rem solid #ccc;
+                    padding:0.1333rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.collect{
+    display:flex;
+    width: 100%;
+    height: 100%;
+    flex-flow:column wrap;
+    justify-content: flex-start;
+    background: #eee;
+    >.div1{
+        display:flex;
+        width:100%;
+        height: 3.0667rem;
+        font-size:0.4267rem;
+        flex-flow:row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom:0.0133rem solid #ccc;
+        padding:0.5333rem 0 0.32rem 0.32rem;
+        background: #fff;
+        >.div2{
+            display:flex;
+            width: 2rem;
+            height: 2rem;
+            overflow: hidden;
+            border:0.0133rem solid #ccc;
+            border-radius:0.04rem 0.04rem;
+            >img{
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+        >.div21{
+            display:flex;
+            width: 100%;
+            height: 100%;
+            flex-flow:column wrap;
+            justify-content: space-around;
+            >.div3{
+                display:flex;
+                width: 100%;
+                padding-left:0.2667rem;
+                flex-flow:row nowrap;
+                justify-content: space-between;
+                align-items:center;
+                >.companyName{
+                    color:#111;
+                    max-width:6.4667rem;
+                    white-space: nowrap;  
+                    text-overflow:ellipsis; 
+                    overflow:hidden;
+                }
+                >.font2{
+                    display:flex;
+                    width: 0.6rem;
+                    height: 0.6rem;
+                    margin-right:0.3067rem;
+                    background:url('../../../assets/img/mine_sprites.png') -5.92rem -0.8933rem no-repeat;
+                }
+                >.kb{
+                    font-size:0.3733rem;
+                    color:#777;
+                }
+                >.style{
+                    font-size:0.3733rem;
+                    color:#777;
+                    margin-right:0.84rem;
+                }
+                >.consultation{
+                    font-size:0.32rem;
+                    color:#333;
+                }
+            }
+        }
+    }
+}

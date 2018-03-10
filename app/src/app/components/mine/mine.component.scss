@@ -1,0 +1,181 @@
+@import url("//at.alicdn.com/t/font_584953_082os7v5mapaxlxr.css");
+.mine{
+    display:flex;
+    flex-flow:column wrap;
+    justify-content: space-around;
+    height: 100%;
+    .user{
+        display:flex;
+        width: 100%;
+        height: 5.4133rem;
+        overflow: hidden;
+        background-image:url('../../../assets/img/mine_01.png');
+        background-size:cover;
+    }
+    .userId{
+        position:absolute;
+        font-size:0.4rem;
+        color:#888;
+        left:50%;
+        top:22%;
+        transform:translate(-50%);
+    }
+    .main{
+        display:flex;
+        flex:1;
+        width: 100%;
+        flex-flow:column wrap;
+        justify-content: flex-start;
+        overflow-y: scroll;
+        overflow-x:hidden;
+        border-top:0.16rem solid #eee;
+        >ul{
+            display:flex;
+            width: 100%;
+            flex-flow:column wrap;
+            justify-content: flex-start;
+            >li{
+                display:flex;
+                flex-flow:row;
+                height: 1.8rem;
+                margin-left:0.2667rem;
+                overflow: hidden;
+                border-bottom:0.0133rem solid #ccc;
+                >div{
+                    display:flex;
+                }
+                >.left{
+                    width: 1.3333rem;
+                    height: 1.7867rem;
+                    overflow: hidden;
+                    >.mainI{
+                        display:flex;
+                        width:1.0667rem ;
+                        height: 1.0667rem;
+                        font-size:0.5333rem;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top:0.3467rem;
+                        border-radius:0.5333rem 0.5333rem;
+                        color:#fff;
+                    }
+                    >.icon-fangzi{
+                        background:#1bbfa7;
+                    }
+                    >.icon-wujiaoxing{
+                        background: #f0a957;
+                    }
+                    >.icon-icon--{
+                        background:#6bace2;
+                    }
+                    >.icon-tubiaolunkuo-{
+                        background:#ec9081;
+                    }
+                    
+                }
+                >.right{
+                    flex:1;
+                    flex-flow:column wrap;
+                    padding-top:0.2933rem;
+                    >span{
+                        flex:1;
+                        display:flex;
+                        width: 100%;
+                        justify-content: flex-start;
+                        align-items:flex-start;
+                    }
+                    >.span1{
+                        font-size:0.3733rem;
+                        color:#000;
+                    }
+                    >.span2{
+                        font-size:0.32rem;
+                        color:#999;
+                    }
+                    //32,34,449
+                }
+                >.rightI{
+                    display:flex;
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    font-size:0.6rem;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top:0.3467rem;
+                    border-radius:0.6rem 0.6rem;
+                }
+            }
+        }
+        >.transition{
+            display:flex;
+            height: 1.1333rem;
+            color:#9b9b9b;
+            font-size:0.3733rem;
+            padding:0.32rem 0 0 0.2933rem;
+            background: #e3e3e3;
+        }
+        >.contact{
+            display:flex;
+            height: 2.2667rem;
+            flex-flow:row nowrap;
+            justify-content: space-around;
+            >div{
+                display:flex;
+                flex:1;
+                height: 2.2667rem;
+                flex-flow:row nowrap;
+                justify-content: space-around;
+                .left{
+                    padding-left:0.1733rem;
+                    >i{
+                        display:flex;
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        font-size:0.6rem;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top:0.3467rem;
+                        border-radius:0.6rem 0.6rem;
+                        color:#fff;   
+                        background: #25ab79;
+                    }
+                }
+                .right{
+                    display:flex;
+                    flex-flow:column wrap;
+                    padding-top:0.4rem;
+                    flex:1;
+                    padding-left:0.2667rem;
+                    >span{
+                        font-size:0.3733rem;
+                        color:#000;
+                        flex:1;
+                        align-items:flex-start;
+                        justify-content: flex-start;
+                    }
+                    .span1{
+
+                    }
+                    .span2{
+                        color:#999;
+                    }
+                    >i{
+
+                    }
+                }
+            }
+            >div:first-child{
+                border-right:0.0267rem solid #ccc;
+            }
+        }
+        .transition2{
+            height: 0.4rem;
+            background:#e3e3e3;
+        }
+    }
+    .tempFoot{
+        display:flex;
+        height: 1.2rem;
+        background:#ccc;
+    }
+}

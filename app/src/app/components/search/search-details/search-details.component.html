@@ -1,0 +1,52 @@
+<div id='yp_search_details' [@showAddresList]="showAddresListKey" >
+   <header id='yp_details_head' #dthead>
+     <span (click)="cencal()">取消</span>
+     <b>选择城市</b>
+     <span></span>
+   </header>
+   <main id='yp_details_body' #dtbody>
+     <dl>
+       <dt>定位城市</dt>
+       <dd>定位城市：{{city}}</dd>
+     </dl>
+     <ng-container *ngFor="let val of word">
+
+
+          <dl *ngIf="addressList[val].length > 0">
+            <ng-container [ngSwitch]="val"  >
+              <dt   *ngSwitchCase="'record'" >最近访问城市</dt>  
+              <dt   *ngSwitchCase="'hot'" >热门城市</dt>      
+              <dt   *ngSwitchDefault >{{val}}</dt>      
+                        
+                            
+            </ng-container>
+            <ng-container  *ngFor="let _val of addressList[val]">
+                <dd (click)="postParent(_val)">{{_val}}</dd>
+            </ng-container>
+            
+         
+            
+            </dl>
+     </ng-container>
+ 
+   </main>
+
+      <ul id="right-side" [@rightSide]="showAddresListKey">
+        <li (click)="jump(dtbody,false,dthead)" >GPS</li>
+        <ng-container *ngFor="let val of word;">
+            <li *ngIf="addressList[val].length > 0 "  (click)="jump(dtbody,val,dthead)" >
+              <ng-container [ngSwitch]="val"  >
+                <ng-container    *ngSwitchCase="'record'" >历史</ng-container >  
+                <ng-container    *ngSwitchCase="'hot'" >热门</ng-container >      
+                <ng-container    *ngSwitchDefault >{{val}}</ng-container >      
+                          
+                              
+              </ng-container>
+                  
+              </li>
+        </ng-container>
+ 
+ 
+
+      </ul>
+</div>

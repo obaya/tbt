@@ -1,0 +1,14 @@
+{
+    "api":"/getGoodsByType3",
+    "cols":["id","nPrice","description","type1","type3","create_at"],
+    "oppositeCols":["type1","type2","create_at"],
+    "multiple":true,
+    "privateDic":{
+        "en":{
+            
+        },
+        "cn":{
+            "nPrice":"销售价格"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<div class="toolbar ">
+    <div class="tool" (click)=changeMask(0)>
+        <i class="font1 iconfont icon-icon"></i>
+        <p>装修保</p>
+    </div>
+    <div class="tool" (click)=changeMask(1)>
+        <i class="font2 iconfont icon-licai"></i>
+        <p>装修理财</p>
+    </div>
+    <div class="tool" (click)="changeMask(2)">
+        <i class="font3 iconfont icon-dianhuazhengzaibohao"></i>
+        <p>装修咨询</p>
+    </div>
+    <div *ngIf="mask" class="mask">
+        <div class="tips">
+            <span>{{tips[tipsIdx]}}</span>
+            <div>
+                <button class="ensure" (click)="changeMask()">确定</button>
+                <button class="cancel" (click)="changeMask()">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

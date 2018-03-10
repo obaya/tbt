@@ -1,0 +1,485 @@
+@import url('//at.alicdn.com/t/font_579019_7j1bbe7xbw9x80k9.css');
+$height: 1.2rem;
+$fs: 0.43rem;
+$fs-28: 0.37rem;
+$fs-24: 0.32rem;
+$color-q:#626262;
+#yp_search{
+ 
+       display: flex;
+       flex-direction: column;
+       height:100%;
+       width: 100%;
+       font-size: $fs;
+       #yp_search_header{
+            $l_r_w: 1.07rem;
+            height: $height;
+            display: flex;
+            span{
+                &:nth-of-type(1){
+                    width:  $l_r_w;
+                }
+                &:nth-of-type(2){
+                    flex:1;
+                    text-align: center;
+                    font-weight: bold;
+                    line-height: $height;
+                    
+                }                
+                
+            }
+            i{
+                width:  $l_r_w;
+                line-height: $height;
+                font-size: 0.60rem;
+                text-align: center;
+                color:#9E9FA3;
+            }
+            border-bottom:1px solid #E3E3E3;
+            
+       }
+
+       #yp_search_body{
+           flex:1;
+           overflow-x: hidden;
+           width: 100%;
+           
+        
+           .yp_ci_box{
+               
+               position: absolute;
+               z-index:10;
+               top: $height;
+               left: 0px;
+               margin-bottom: -$height * 2;
+               height: $height;
+               overflow: hidden;
+               background:rgba(0, 0, 0, 0.449);
+                width: 100%;
+                display:flex;
+                flex-direction: column;
+                &.showbox{
+                    height:100%;
+                }
+                .yp_classify{
+                    $bt-b-c:#E0E0E0;
+                    height: $height;
+                    display: flex;
+                    background: #fff;
+                    li{
+                        flex:1;
+                        text-align: center;
+                        line-height: $height;
+                        font-size:  $fs-28;
+                        color:#989898;
+                        .icon-l{
+                            font-size: 0.38rem;
+                            padding-right: 0.05rem
+                        }
+                        .icon-r{
+                            font-size: 0.53rem;
+                            position: relative;
+                            top: 0.04rem;
+                            left: 0.12rem;
+                        }
+                        &:nth-of-type(1){
+                            border-right: 1px solid $bt-b-c;
+                        }
+
+                        &.focus{
+                            color: #58bc58;
+                        }
+                    }
+                    border-bottom:  1px solid $bt-b-c;
+
+
+                }
+                .yp_ci_addrs{
+                    .yp_ci_city{
+                        background: #fff;
+                        &.focus{
+                            display: block;
+                        }
+                        display:none;
+                        .yp_city_main{
+                            display: flex;
+                            flex-wrap: wrap;
+                            padding-top: .4rem;
+                            span{
+                                border: #EEEEEE .01rem solid;
+                                width:  2.5rem;
+                                height: $height / 1.7 ;
+                                line-height: $height / 1.7;
+                                text-align: center;
+                                margin: .2rem .41rem;
+                                border-radius:  .04rem;
+                                font-size:$fs-24;
+                                color: #949494;
+                                &.focus{
+                                    color: #58bc58;
+                                    border: #58bc58 1px solid;
+                                    
+                                }
+                                
+                                
+                            }
+                        }
+                        .yp_classify_foot{
+                            display: flex;
+                            border-top:1px solid #E4E4E4;
+                            border-bottom:1px solid #E4E4E4;
+                            height: $height - .3rem;
+                            line-height: $height - .3rem;
+                                font-size:$fs-24;
+                            color: #606060;
+                            padding: 0 .13rem;
+                            div{
+                                &:nth-of-type(1){
+                                    flex: 1;
+                                    span{
+                                     font-size:$fs-24 +  .05rem;
+                                        
+                                    }
+                                }
+                                &:nth-of-type(2){
+                                    i{
+                                        font-size: $fs-24;
+                                    }
+                                }              
+                            }
+                            
+                        }
+                    }
+                    .yp_ci_hot{
+                        background: #fff;
+                        text-align: center;
+                        font-size: $fs-24;
+                        color: #626262;
+                        display: none;
+                        &.focus{
+                            display: block;
+                        }
+                        p{
+                            border:  1px solid #E1E1E1;
+                            height: $height - .23rem;
+                            line-height:  $height - .23rem;
+                            &.focus{
+                                color: #58bc58;
+                            }
+                        }
+                    }    
+
+
+                }
+                .yp_ci_out{
+                    flex:1;
+                    overflow: hidden;
+                }
+           }
+           .yp_ci_body{
+               padding-top: $height;
+               .yp_classify_foot_loadding{
+                   display: flex;
+                   align-items: center;
+                   img{
+                       width: 0.4rem;
+                       height: 0.4rem;
+                   }
+               }
+   
+               >h2{
+                   $height-ci: $height - 0.34rem;
+                    display: flex;
+                    font-size:  $fs-24;
+                    font-weight: normal;
+                    padding:0 0.3rem;
+                    height:$height-ci;
+                    line-height: $height-ci;
+                    background: #EEEEEE;
+                    color:#606060;
+                    >span{
+                        flex: 1;
+                        &>span{
+                        padding-left: 0.11rem;
+                        
+                       }
+                    }
+                    i{
+                        font-size: 0.40rem;
+                    }
+                    
+               }
+               >ul{
+                   li{
+                       display: flex;
+                       padding: 0.35rem 0.13rem;
+                       border:1px solid #E4E4E4;
+                       div{
+                           &:nth-of-type(1){
+                               img{
+                                   margin: 0;
+                                   height:1.7rem;
+                                   width: 1.7rem;
+                                   border: 1px solid #E4E4E4;
+                                   border-radius: 0.0.1rem;
+                               }
+                           }
+                           &:nth-of-type(2){
+                               flex:1;
+                               padding-left: 0.24rem;
+                              h3{
+                                  $h3-height:$height / 1.8;
+                                font-size:$fs - 0.02rem;
+                                height: $h3-height;
+                                line-height:  $h3-height;
+                                display: flex;
+                                span{
+                                    flex:1;
+                                }
+                                i{
+                                    background: #FE8900;
+                                    color:#fff;
+                                    font-style:normal;
+                                    font-weight: normal;
+                                    height: 0.43rem;
+                                    width:0.43rem;
+                                    text-align: center; 
+                                    font-size: 0.32rem;
+                                    line-height: 0.43rem;
+                                    position: relative;
+                                    top: 0.15rem;
+                                }
+                              }
+                              >p{
+                                  color: $color-q;
+                                  $p-height:$height / 1.8;
+                                  height: $p-height;
+                                  line-height:  $p-height;
+                                font-size:$fs-28 - 0.02rem; 
+                                span{
+                                    padding-right: 0.7rem;
+                                    color:#F99027;
+                                }
+                              }
+                              >div{
+                                font-size:$fs-24 - 0.02rem; 
+                              }
+                           }
+                                                
+                       }
+                       
+                   }
+               }
+
+               .yp_loadData{
+                      display: flex;
+                        font-size: $fs-24;
+                       color:#000;
+                       justify-content: center;   
+                       height: .73rem;
+                       line-height: .73rem;
+                       overflow: hidden;
+                       img{
+                           width: 0.32rem;
+                           height: 0.32rem;
+                           margin-top: 0.20rem;
+                           margin-left: 0.19rem;
+                       }   
+                       background: #E4E4E4;              
+                   
+               }
+           }
+           .yp_fixed_btn{
+               color:#fff;
+               position: fixed;
+               right: 0.27rem;
+               bottom: $height + 0.33rem;
+               display:flex ;
+                flex-direction: column;
+               i{
+                   width: 0.80rem;
+                   height: 0.80rem;
+                   text-align: center;
+                   line-height:  0.80rem;
+                   font-size: 0.50rem;
+                   margin: 0.29rem 0px;
+                   border-radius: 0.80rem;
+                   
+                   &:nth-child(1){
+                       background: #FFA032;
+
+                   }
+                   &:nth-child(2){
+                       background: #47C68F;
+                   }
+               }
+           }
+           
+       }
+       #yp_search_footer{
+        height: $height;
+        background: #000;
+        position: relative;
+         .yp_footer_container{
+             position: absolute;
+             top:0px;
+             left:0px;
+             height:$height;
+             width: 100%;
+             background: #fff;
+             z-index: 100 
+         }
+       }
+
+
+       #yp_map{
+        
+            // display: none !important;
+        position:absolute;
+        top:0px;
+        left:100%;
+        height:100%;
+        width:100%;
+        z-index: 200;
+        #yp_map_dt{
+            width:100%;
+            height:100%;
+        }
+        .map_back-menu{
+            width: .88rem;
+            height: .88rem;
+            background: #fff;
+            border-radius: .88rem;
+            position:absolute;
+            top: 0.27rem;
+            left: 0.27rem;
+            z-index: 10000000;
+            text-align: center;
+            line-height: .88rem;
+            i{
+                font-size: 0.4rem;
+                position: relative;
+                top:  -0.04rem;
+                left: -0.04rem;
+            }
+        }
+    
+        
+       }
+
+
+}
+
+#yp_main_scarch{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    width: 100%;
+    font-size: $fs;
+    position: absolute;
+    top:0px;
+    left:0px;
+    background:rgba(0, 0, 0, 0.449);
+    z-index: 1000;
+    .yp_ms_header{
+        height:$height;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        div{
+            height:$height - 0.57rem;
+            line-height:$height - 0.57rem;
+            background: #EEEEEE;
+            width: 8rem;
+            border-radius: 0.05rem;
+            margin-left: 0.53rem;
+            display: flex;
+            i{
+             margin:0 0.23rem;
+                
+                font-size:$fs-28;
+            }
+            input{
+                height:$height - 0.57rem;
+                line-height:$height - 0.57rem;
+                font-size: $fs-28;
+                width: 8rem;
+      
+                background: #EEEEEE;
+                border: none;
+            }
+
+        }
+        span{
+            flex:1;
+            text-align: center;
+            color:#58bc58;
+        }
+    }
+    .yp_ms_body{
+        flex:1;
+        overflow-x: hidden;
+        background: #fff;
+        >ul{
+            li{
+                display: flex;
+                padding: 0.35rem 0.13rem;
+                border:1px solid #E4E4E4;
+                div{
+                    &:nth-of-type(1){
+                        img{
+                            margin: 0;
+                            height:1.7rem;
+                            width: 1.7rem;
+                            border: 1px solid #E4E4E4;
+                            border-radius: 0.0.1rem;
+                        }
+                    }
+                    &:nth-of-type(2){
+                        flex:1;
+                        padding-left: 0.24rem;
+                       h3{
+                           $h3-height:$height / 1.8;
+                         font-size:$fs - 0.02rem;
+                         height: $h3-height;
+                         line-height:  $h3-height;
+                         display: flex;
+                         span{
+                             flex:1;
+                         }
+                         i{
+                             background: #FE8900;
+                             color:#fff;
+                             font-style:normal;
+                             font-weight: normal;
+                             height: 0.43rem;
+                             width:0.43rem;
+                             text-align: center; 
+                             font-size: 0.32rem;
+                             line-height: 0.43rem;
+                             position: relative;
+                             top: 0.15rem;
+                         }
+                       }
+                       >p{
+                           color: $color-q;
+                           $p-height:$height / 1.8;
+                           height: $p-height;
+                           line-height:  $p-height;
+                         font-size:$fs-28 - 0.02rem; 
+                         span{
+                             padding-right: 0.7rem;
+                             color:#F99027;
+                         }
+                       }
+                       >div{
+                         font-size:$fs-24 - 0.02rem; 
+                       }
+                    }
+                                         
+                }
+                
+            }
+        }
+    }
+}

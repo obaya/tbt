@@ -1,0 +1,39 @@
+<my-breadcrumb name1="上传" name2="上传"></my-breadcrumb>
+<div class="ui-g">
+  <label class="ui-g-2"><span class="star">*</span>品牌LOGO:</label>
+  <div class="ui-g-6">
+    <label class="upload-button">
+      <input type="file" ngFileSelect multiple
+             (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput">
+      选择图片
+    </label>
+  </div>
+</div>
+<div class="ui-g">
+  <label class="ui-g-2"></label>
+  <div class="ui-g-6">
+    <el-card body-style="padding:0">
+      <div class="progress-box" *ngIf="progressboxNgif">
+        <div *ngFor="let f of files; let i = index;">
+          {{ f.name }}
+          <div>
+            <el-progress type="circle" [percentage]="f.progress?.data?.percentage"></el-progress>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-box" *ngIf="imgboxNgif">
+        <img src="{{imgReadUrl}}{{originImgUrl}}" alt="">
+      </div>
+    </el-card>
+  </div>
+</div>
+<div class="ui-g">
+  {{response|json}}
+</div>
+
+
+展示 和 primeng 不一样的上传 (带请求头);样式大家自己可以组装一下;他的官网样式也不是很好
+
+
+github  地址  ngx-uploader  <a href="https://github.com/jkuri/ngx-uploader" style="font-size: 20px">ngx-uploader</a>

@@ -1,0 +1,128 @@
+ <div class="container">
+     <div class="y-cdetails">
+        <ul id="header">
+            <li (click)="goback()">
+                <i class="iconfont icon-fanhui" style="font-size:0.506667rem;"></i>
+                
+            </li>
+            <li class="y-ctitle">
+            公司详情</li>
+            <li>
+                <span>
+                    <i class="iconfont icon-shoucang " style="font-size:0.506667rem;" (click)="shoucang($event)"></i>
+                    
+                </span>
+                <span >
+                    <i class="iconfont icon-fenxiang" style="font-size:0.506667rem;" (click) = "shareShow($event)"></i>
+                    
+                </span>
+            </li>
+        </ul>
+        <div id="main">
+            <div class="yi">
+                <div class="left">
+                    <img  [attr.src]="logoimgUrl" alt="图片无法显示"/>
+                </div>
+                <div class="right">
+                    <div class="c-name">{{companyInfo.companyName}}</div>
+                    <div  class="c-koubei">
+                        <span>口碑值 : </span><span class="num">{{companyInfo.kb}}</span>
+                    </div>
+                    <div  class="c-renqi">
+                        <span>咨询人数 : </span><span class="num">{{companyInfo.consultation}}</span>
+                    </div>
+                </div>
+            </div>
+            <ul class="er">
+                <li class="pingfen" *ngIf="pfshow" (click)="toComment(companyInfo.companyName)">
+                    <div>
+                        <span>评分:</span>
+                        <span>
+                            <span>设计</span><span>{{shejiFen}}</span>
+                            <span>服务</span><span>{{fuwuFen}}</span>
+                            <span>施工</span><span>{{shigongFen}}</span>
+                        </span>
+                    </div>
+                    <span *ngIf="pfshow">
+                        <i class="iconfont icon-xiayibu" style="font-size:0.293333rem;"></i>
+                    </span>
+                </li>
+                <li class="pingfen" *ngIf="!pfshow"false>
+                    <div>
+                        <span>评分:</span>
+                        
+                        <span *ngIf="!pfshow">暂无评论</span>
+                    </div>
+                </li>
+                <li class="dizhi">
+                    <div >
+                        <p>地址:</p>
+                        <p class="address">{{companyAt}}</p> 
+                    </div>
+                    <!-- <span>
+                        <i class="iconfont icon-xiayibu" style="font-size:0.293333rem;" (click)="nextStep($event)"></i>
+                    </span> -->
+                </li>
+            </ul>
+            <ul class="san">
+                <li class="fangan" (click)="planshow?toPlanList(companyInfo.companyName):''">
+                    <div class="fan-top">
+                        <span>设计方案</span>
+                        <span>
+                            全部
+                            <span style="color:#8AFED1">{{totalPlan}}</span>
+                            个
+                            <span>
+                                <i class="iconfont icon-xiayibu" style="font-size:0.293333rem;"></i>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="fan-bottom">
+                        <img [attr.src]="planimgUrl" alt="图片无法显示" />
+                        <p>{{planInfo.planTitle}}</p>
+                    </div>
+                </li>
+                <li class="jianjie" (click)="toIntroDetail(companyInfo.companyName)">
+                    <div class="jian-top">
+                        <span>公司简介</span>
+                        <span> 
+                            <i class="iconfont icon-xiayibu" style="font-size:0.293333rem;"></i>
+                        </span>
+                    </div>
+                    <div class="jian-bottom">
+                    {{companyInfo.introduce}}
+                    </div>
+                </li>
+                <li class="zhuce">
+                    <div class="zhu-top">
+                        <span>工商注册信息</span>
+                    </div>
+                    <div class="zhu-bottom">
+                        <li>
+                            <span>成立日期:</span>
+                            <span>2015-01-28</span>
+                        </li>
+                        <li>
+                            <span>注册资金:</span>
+                            <span>暂无信息</span>
+                        </li>
+                        <li>
+                            <span>登记机关:</span>
+                            <span>管理局</span>
+                        </li>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+   
+       
+        <div>
+            <share [style.display]="show" [showbg]="show" (parentAttr)="parentEvent($event)"></share>
+        </div>
+  
+     
+ </div>
+
+
+
